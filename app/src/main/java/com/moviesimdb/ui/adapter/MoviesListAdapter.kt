@@ -33,6 +33,7 @@ class MoviesListAdapter(private val onItemClick: (Int) -> Unit): ListAdapter<Mov
                 }
             }
 
+            //bind the data with views
             fun bindViews(moviesResult: MoviesResult) {
                 binding.tvMovieTitle.text = moviesResult.title
                 binding.tvMovieDesc.text = moviesResult.overview
