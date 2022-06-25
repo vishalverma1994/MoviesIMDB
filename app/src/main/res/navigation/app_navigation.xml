@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/moviesListFragment">
+
+    <fragment
+        android:id="@+id/moviesListFragment"
+        android:name="com.moviesimdb.ui.fragments.MoviesListFragment"
+        android:label="fragment_issue_tracker_dashboard"
+        tools:layout="@layout/fragment_movies_list">
+
+        <action
+            android:id="@+id/action_myMoviesListFragment_to_myMovieDetailFragment"
+            app:destination="@id/movieDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.moviesimdb.ui.fragments.MovieDetailFragment"
+        android:label="fragment_github_issue_tracker_detail"
+        tools:layout="@layout/fragment_movie_detail">
+        <argument
+            android:name="movieId"
+            app:argType="integer"
+            android:defaultValue="0"/>
+
+    </fragment>
+
+</navigation>
